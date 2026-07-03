@@ -1117,79 +1117,6 @@ footer {
   object-fit: contain !important;
   display: block !important;
 }
-
-
-/* ── FIX DEFINITIVO ESCALA ÍCONES PNG ─────────────────────────────
-   Mantém a estrutura do HTML e bloqueia qualquer PNG "ico-*" de
-   assumir tamanho original ou posição absoluta no viewport. */
-img[src^="ico-"],
-img[src*="/ico-"] {
-  display: block !important;
-  position: static !important;
-  inset: auto !important;
-  float: none !important;
-  transform: none !important;
-  min-width: 0 !important;
-  min-height: 0 !important;
-  max-width: 28px !important;
-  max-height: 28px !important;
-  width: 28px !important;
-  height: 28px !important;
-  object-fit: contain !important;
-  object-position: center !important;
-  flex: 0 0 auto !important;
-  z-index: auto !important;
-}
-
-.pillar-icon,
-.fw-icon,
-.srv-tile-icon {
-  overflow: hidden !important;
-  flex: 0 0 auto !important;
-  line-height: 0 !important;
-}
-
-.pillar-icon img[src^="ico-"],
-.fw-icon img[src^="ico-"],
-.srv-tile-icon img[src^="ico-"] {
-  width: 24px !important;
-  height: 24px !important;
-  max-width: 24px !important;
-  max-height: 24px !important;
-}
-
-.proc-num .pi {
-  width: 24px !important;
-  height: 24px !important;
-  line-height: 0 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  overflow: hidden !important;
-}
-
-.proc-num .pi img[src^="ico-"] {
-  width: 18px !important;
-  height: 18px !important;
-  max-width: 18px !important;
-  max-height: 18px !important;
-}
-
-.chart-card img[src^="ico-"] {
-  width: 20px !important;
-  height: 20px !important;
-  max-width: 20px !important;
-  max-height: 20px !important;
-}
-
-/* A ilustração PNG embutida do HERO também fica confinada ao bloco verde. */
-#hero > div[style*="data:image/png"] {
-  background-size: min(300px, 22vw) auto !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
-  overflow: hidden !important;
-}
-
 </style>
 </head>
 <body>
@@ -1280,28 +1207,28 @@ img[src*="/ico-"] {
 
     <div class="pos-pillars reveal">
       <div class="pillar">
-        <div class="pillar-icon"><img src="ico-administracao.png" alt="" style="width:28px;height:28px;object-fit:contain;display:block;"/></div>
+        <div class="pillar-icon" style="background-image:url('ico-administracao.png');background-size:28px 28px;background-repeat:no-repeat;background-position:center;"></div>
         <div>
           <h4>Tecnologia &amp; Automação</h4>
           <p>Integração com ERPs, bancos e sistemas fiscais. Dados em tempo real, sem planilhas manuais.</p>
         </div>
       </div>
       <div class="pillar">
-        <div class="pillar-icon"><img src="ico-planejamento.png" alt="" style="width:28px;height:28px;object-fit:contain;display:block;"/></div>
+        <div class="pillar-icon" style="background-image:url('ico-planejamento.png');background-size:28px 28px;background-repeat:no-repeat;background-position:center;"></div>
         <div>
           <h4>Metodologia Executiva</h4>
           <p>Processos baseados em controladoria de alta performance, com indicadores que guiam decisões estratégicas.</p>
         </div>
       </div>
       <div class="pillar">
-        <div class="pillar-icon"><img src="ico-relacionamento.png" alt="" style="width:28px;height:28px;object-fit:contain;display:block;"/></div>
+        <div class="pillar-icon" style="background-image:url('ico-relacionamento.png');background-size:28px 28px;background-repeat:no-repeat;background-position:center;"></div>
         <div>
           <h4>Equipe de Nível Gerencial</h4>
           <p>Controllers, analistas financeiros seniores e consultores — não assistentes operacionais.</p>
         </div>
       </div>
       <div class="pillar">
-        <div class="pillar-icon"><img src="ico-estrategia.png" alt="" style="width:28px;height:28px;object-fit:contain;display:block;"/></div>
+        <div class="pillar-icon" style="background-image:url('ico-estrategia.png');background-size:28px 28px;background-repeat:no-repeat;background-position:center;"></div>
         <div>
           <h4>Customização Total</h4>
           <p>Cada implantação é desenhada para a realidade do cliente. Nada genérico, nada de prateleira.</p>
@@ -1705,7 +1632,7 @@ img[src*="/ico-"] {
               </tbody>
             </table>
             <div style="margin-top:16px;padding:12px 16px;background:var(--g-fog);border:1px solid var(--g-line);border-radius:8px;display:flex;gap:12px;align-items:flex-start;">
-              <img src="ico-estrategia.png" alt="" style="width:22px;height:22px;object-fit:contain;flex-shrink:0;filter:invert(39%) sepia(98%) saturate(500%) hue-rotate(95deg);"/>
+              <span style="display:inline-block;width:22px;height:22px;background-image:url('ico-estrategia.png');background-size:contain;background-repeat:no-repeat;background-position:center;filter:invert(39%) sepia(98%) saturate(500%) hue-rotate(95deg);flex-shrink:0;"></span>
               <div>
                 <div style="font-family:var(--mono);font-size:9px;letter-spacing:.12em;color:var(--g);text-transform:uppercase;margin-bottom:4px;">Insight STARQIA — Julho/25</div>
                 <div style="font-size:12px;color:var(--grey);line-height:1.6;">CMV 9,6% acima do orçado. Recomendamos revisão de contratos de fornecimento e análise de mix de produtos. Despesas operacionais com desvio de R$ 16,4K — identificamos R$ 9,2K em gastos não recorrentes que podem ser eliminados.</div>
@@ -1788,7 +1715,7 @@ img[src*="/ico-"] {
 
   <div class="srv-grid">
     <div class="srv-tile reveal" data-num="01">
-      <div class="srv-tile-icon"><img src="ico-estrategia.png" alt="" style="width:28px;height:28px;object-fit:contain;display:block;"/></div>
+      <div class="srv-tile-icon" style="background-image:url('ico-estrategia.png');background-size:30px 30px;background-repeat:no-repeat;background-position:center;"></div>
       <h3>Diagnóstico &amp; Auditoria de Processos</h3>
       <p>Mapeamos toda a estrutura financeira atual — fluxos, controles, sistemas e equipe — identificando gargalos, riscos e oportunidades de ganho.</p>
       <ul>
@@ -1800,7 +1727,7 @@ img[src*="/ico-"] {
     </div>
 
     <div class="srv-tile reveal" data-num="02">
-      <div class="srv-tile-icon"><img src="ico-administracao.png" alt="" style="width:28px;height:28px;object-fit:contain;display:block;"/></div>
+      <div class="srv-tile-icon" style="background-image:url('ico-administracao.png');background-size:30px 30px;background-repeat:no-repeat;background-position:center;"></div>
       <h3>Implantação de Controladoria</h3>
       <p>Estruturamos do zero ou reformulamos a área de controladoria com indicadores, processos e governança adequados ao porte da empresa.</p>
       <ul>
@@ -1812,7 +1739,7 @@ img[src*="/ico-"] {
     </div>
 
     <div class="srv-tile reveal" data-num="03">
-      <div class="srv-tile-icon"><img src="ico-relacionamento.png" alt="" style="width:28px;height:28px;object-fit:contain;display:block;"/></div>
+      <div class="srv-tile-icon" style="background-image:url('ico-relacionamento.png');background-size:30px 30px;background-repeat:no-repeat;background-position:center;"></div>
       <h3>Treinamento da Equipe Financeira</h3>
       <p>Capacitamos os profissionais internos para operar com excelência — elevando o nível técnico e gerencial de toda a área.</p>
       <ul>
@@ -1824,7 +1751,7 @@ img[src*="/ico-"] {
     </div>
 
     <div class="srv-tile reveal" data-num="04">
-      <div class="srv-tile-icon"><img src="ico-planejamento.png" alt="" style="width:28px;height:28px;object-fit:contain;display:block;"/></div>
+      <div class="srv-tile-icon" style="background-image:url('ico-planejamento.png');background-size:30px 30px;background-repeat:no-repeat;background-position:center;"></div>
       <h3>Reestruturação de Departamento</h3>
       <p>Para empresas com departamento financeiro existente mas que precisa evoluir — redesenhamos estrutura, processos e tecnologia.</p>
       <ul>
@@ -1836,7 +1763,7 @@ img[src*="/ico-"] {
     </div>
 
     <div class="srv-tile reveal" data-num="05">
-      <div class="srv-tile-icon"><img src="ico-financeiro.png" alt="" style="width:28px;height:28px;object-fit:contain;display:block;"/></div>
+      <div class="srv-tile-icon" style="background-image:url('ico-financeiro.png');background-size:30px 30px;background-repeat:no-repeat;background-position:center;"></div>
       <h3>CFO as a Service</h3>
       <p>Um Chief Financial Officer dedicado ao seu negócio — sem o custo de um executivo CLT. Presença estratégica nas decisões que importam.</p>
       <ul>
@@ -1848,7 +1775,7 @@ img[src*="/ico-"] {
     </div>
 
     <div class="srv-tile reveal" data-num="06">
-      <div class="srv-tile-icon"><img src="ico-crm.png" alt="" style="width:28px;height:28px;object-fit:contain;display:block;"/></div>
+      <div class="srv-tile-icon" style="background-image:url('ico-crm.png');background-size:30px 30px;background-repeat:no-repeat;background-position:center;"></div>
       <h3>Integração &amp; Tecnologia</h3>
       <p>Conectamos seus sistemas — ERP, bancos, plataformas fiscais — em um ecossistema financeiro integrado, automatizado e auditável.</p>
       <ul>
@@ -1869,28 +1796,28 @@ img[src*="/ico-"] {
       <h2 class="s-h2 reveal">Empresas que<br>já chegaram <em>longe</em><br>e precisam ir<br><em>mais além.</em></h2>
       <div class="fw-profiles" style="margin-top:48px;">
         <div class="fw-card reveal">
-          <div class="fw-icon"><img src="ico-cliente.png" alt="" style="width:28px;height:28px;object-fit:contain;display:block;"/></div>
+          <div class="fw-icon" style="background-image:url('ico-cliente.png');background-size:26px 26px;background-repeat:no-repeat;background-position:center;filter:brightness(0) invert(1);"></div>
           <div>
             <h4>Médias e Grandes Empresas</h4>
             <p>Com faturamento acima de R$ 5M/ano que precisam de uma estrutura financeira à altura do seu tamanho.</p>
           </div>
         </div>
         <div class="fw-card reveal">
-          <div class="fw-icon"><img src="ico-backoffice.png" alt="" style="width:28px;height:28px;object-fit:contain;display:block;"/></div>
+          <div class="fw-icon" style="background-image:url('ico-backoffice.png');background-size:26px 26px;background-repeat:no-repeat;background-position:center;filter:brightness(0) invert(1);"></div>
           <div>
             <h4>Empresas em Expansão</h4>
             <p>Cresceram rápido e a estrutura financeira não acompanhou. Precisam de governança e controle profissional.</p>
           </div>
         </div>
         <div class="fw-card reveal">
-          <div class="fw-icon"><img src="ico-estrategia.png" alt="" style="width:28px;height:28px;object-fit:contain;display:block;"/></div>
+          <div class="fw-icon" style="background-image:url('ico-estrategia.png');background-size:26px 26px;background-repeat:no-repeat;background-position:center;filter:brightness(0) invert(1);"></div>
           <div>
             <h4>Grupos Empresariais &amp; Holdings</h4>
             <p>Com múltiplas empresas que demandam visão consolidada, controle por entidade e relatórios para sócios e investidores.</p>
           </div>
         </div>
         <div class="fw-card reveal">
-          <div class="fw-icon"><img src="ico-administracao.png" alt="" style="width:28px;height:28px;object-fit:contain;display:block;"/></div>
+          <div class="fw-icon" style="background-image:url('ico-administracao.png');background-size:26px 26px;background-repeat:no-repeat;background-position:center;filter:brightness(0) invert(1);"></div>
           <div>
             <h4>Departamentos Financeiros a Reformular</h4>
             <p>Equipe interna que existe mas opera sem processos, sem indicadores e sem visão estratégica.</p>
@@ -1924,7 +1851,7 @@ img[src*="/ico-"] {
 
   <div class="proc-timeline" style="margin-top:64px; max-width:860px;">
     <div class="proc-step reveal">
-      <div class="proc-num"><div class="pi"><img src="ico-estrategia.png" alt="" style="width:22px;height:22px;object-fit:contain;filter:brightness(0) invert(1);"/></div><div class="pn">01</div></div>
+      <div class="proc-num"><div class="pi" style="background-image:url('ico-estrategia.png');background-size:20px 20px;background-repeat:no-repeat;background-position:center;filter:brightness(0) invert(1);"></div><div class="pn">01</div></div>
       <div class="proc-body">
         <h4>Diagnóstico Financeiro</h4>
         <p>Entrevistas com liderança, análise de demonstrativos, mapeamento de sistemas, processos e equipe. Identificamos lacunas e oportunidades com base em evidências — não em suposições.</p>
@@ -1933,7 +1860,7 @@ img[src*="/ico-"] {
     </div>
 
     <div class="proc-step reveal">
-      <div class="proc-num"><div class="pi"><img src="ico-planejamento.png" alt="" style="width:22px;height:22px;object-fit:contain;filter:brightness(0) invert(1);"/></div><div class="pn">02</div></div>
+      <div class="proc-num"><div class="pi" style="background-image:url('ico-planejamento.png');background-size:20px 20px;background-repeat:no-repeat;background-position:center;filter:brightness(0) invert(1);"></div><div class="pn">02</div></div>
       <div class="proc-body">
         <h4>Desenho da Solução</h4>
         <p>Apresentamos o modelo financeiro ideal para o seu negócio: estrutura de controladoria, indicadores, fluxo de trabalho, tecnologias e plano de implantação com cronograma e responsáveis.</p>
@@ -1942,7 +1869,7 @@ img[src*="/ico-"] {
     </div>
 
     <div class="proc-step reveal">
-      <div class="proc-num"><div class="pi"><img src="ico-administracao.png" alt="" style="width:22px;height:22px;object-fit:contain;filter:brightness(0) invert(1);"/></div><div class="pn">03</div></div>
+      <div class="proc-num"><div class="pi" style="background-image:url('ico-administracao.png');background-size:20px 20px;background-repeat:no-repeat;background-position:center;filter:brightness(0) invert(1);"></div><div class="pn">03</div></div>
       <div class="proc-body">
         <h4>Implantação &amp; Integração</h4>
         <p>Executamos a implantação com acompanhamento intensivo — configuração de sistemas, padronização de processos, treinamento da equipe e ajuste fino até a operação estar estável.</p>
@@ -1951,7 +1878,7 @@ img[src*="/ico-"] {
     </div>
 
     <div class="proc-step reveal">
-      <div class="proc-num"><div class="pi"><img src="ico-backoffice.png" alt="" style="width:22px;height:22px;object-fit:contain;filter:brightness(0) invert(1);"/></div><div class="pn">04</div></div>
+      <div class="proc-num"><div class="pi" style="background-image:url('ico-backoffice.png');background-size:20px 20px;background-repeat:no-repeat;background-position:center;filter:brightness(0) invert(1);"></div><div class="pn">04</div></div>
       <div class="proc-body">
         <h4>Operação &amp; Acompanhamento</h4>
         <p>Após a implantação, a STARQIA permanece como parceiro operacional e estratégico — com reuniões periódicas, análise de desvios, relatórios executivos e consultoria contínua.</p>
@@ -1960,7 +1887,7 @@ img[src*="/ico-"] {
     </div>
 
     <div class="proc-step reveal">
-      <div class="proc-num"><div class="pi"><img src="ico-financeiro.png" alt="" style="width:22px;height:22px;object-fit:contain;filter:brightness(0) invert(1);"/></div><div class="pn">05</div></div>
+      <div class="proc-num"><div class="pi" style="background-image:url('ico-financeiro.png');background-size:20px 20px;background-repeat:no-repeat;background-position:center;filter:brightness(0) invert(1);"></div><div class="pn">05</div></div>
       <div class="proc-body">
         <h4>Evolução Contínua</h4>
         <p>Revisão semestral de processos, indicadores e tecnologia. Atualizamos o modelo financeiro conforme o negócio evolui — garantindo que a estrutura sempre suporte o próximo nível de crescimento.</p>
