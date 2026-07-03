@@ -127,7 +127,7 @@ nav {
 }
 
 /* green accent block top-right */
-.hero-accent {
+.hero-accent { position:relative;
   position: absolute;
   top: 0; right: 0;
   width: 42vw; height: 56vh;
@@ -269,6 +269,10 @@ h2.s-h2 em { font-style: italic; color: var(--g); }
 #positioning {
   background: var(--ink);
   color: #fff;
+  background-image: url('pattern.jpg');
+  background-size: 400px 400px;
+  background-repeat: repeat;
+  background-blend-mode: overlay;
 }
 
 .pos-grid {
@@ -756,14 +760,7 @@ h2.s-h2 em { font-style: italic; color: var(--g); }
   line-height: 1; pointer-events: none;
 }
 
-.srv-tile-icon {
-  width: 52px; height: 52px;
-  background: var(--g-fog);
-  border-radius: 14px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 24px; margin-bottom: 24px;
-  border: 1px solid var(--g-line);
-}
+.srv-tile-icon{width:52px;height:52px;background:var(--g-fog);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:0;margin-bottom:24px;border:1px solid var(--g-line);padding:10px;}.srv-tile-icon img{width:100%;height:100%;object-fit:contain;}
 
 .srv-tile h3 {
   font-family: var(--serif);
@@ -793,6 +790,10 @@ h2.s-h2 em { font-style: italic; color: var(--g); }
 #forwhom {
   background: var(--ink);
   color: #fff;
+  background-image: url('pattern.jpg');
+  background-size: 400px 400px;
+  background-repeat: repeat;
+  background-blend-mode: overlay;
 }
 
 .fw-grid {
@@ -820,13 +821,7 @@ h2.s-h2 em { font-style: italic; color: var(--g); }
   border-color: rgba(0,170,79,.3);
   background: rgba(0,170,79,.05);
 }
-.fw-icon {
-  width: 48px; height: 48px;
-  background: rgba(0,170,79,.12);
-  border-radius: 12px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 22px; flex-shrink: 0;
-}
+.fw-icon {width:48px;height:48px;background:rgba(0,170,79,.12);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;padding:10px;}.fw-icon img{width:100%;height:100%;object-fit:contain;filter:brightness(0) invert(1);}
 .fw-card h4 {
   font-family: var(--serif);
   font-weight: 700; font-size: 17px; margin-bottom: 6px;
@@ -940,6 +935,10 @@ h2.s-h2 em { font-style: italic; color: var(--g); }
 /* ── CTA ──────────────────────────────────────────────────── */
 #cta-section {
   background: var(--g);
+  background-image: url('pattern.jpg');
+  background-size: 400px 400px;
+  background-repeat: repeat;
+  background-blend-mode: overlay;
   color: #fff;
   text-align: center;
   padding: 120px 72px;
@@ -1099,12 +1098,18 @@ footer {
     <li><a href="#process">Metodologia</a></li>
     <li><a href="#forwhom">Para quem</a></li>
   </ul>
+  <a href="https://starqia.com" target="_blank" style="font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);text-decoration:none;padding:9px 16px;border:1px solid rgba(255,255,255,.15);border-radius:var(--r);transition:all .2s;" onmouseover="this.style.color='#fff';this.style.borderColor='rgba(255,255,255,.4)'" onmouseout="this.style.color='rgba(255,255,255,.5)';this.style.borderColor='rgba(255,255,255,.15)'">starqia.com ↗</a>
   <a href="#cta-section" class="nav-btn">Agendar diagnóstico →</a>
 </nav>
 
 <!-- ── HERO ─────────────────────────────────────────────────────── -->
 <section id="hero">
-  <div class="hero-accent"></div>
+  <div class="hero-accent">
+    <img src="logo-vertical.png" alt="STARQIA"
+         style="position:absolute;bottom:10%;left:50%;transform:translateX(-50%);
+                height:52%;width:auto;opacity:.18;filter:brightness(0) invert(1);
+                pointer-events:none;"/>
+  </div>
   <div class="hero-content">
     <div class="hero-eyebrow">STARQIA · Gestão Financeira Estratégica</div>
     <h1 class="hero-h1">
@@ -1159,28 +1164,28 @@ footer {
 
     <div class="pos-pillars reveal">
       <div class="pillar">
-        <div class="pillar-icon">🧠</div>
+        <div class="pillar-icon"><img src="ico-administracao.png" alt=""/></div>
         <div>
           <h4>Tecnologia &amp; Automação</h4>
           <p>Integração com ERPs, bancos e sistemas fiscais. Dados em tempo real, sem planilhas manuais.</p>
         </div>
       </div>
       <div class="pillar">
-        <div class="pillar-icon">🏛️</div>
+        <div class="pillar-icon"><img src="ico-planejamento.png" alt=""/></div>
         <div>
           <h4>Metodologia Executiva</h4>
           <p>Processos baseados em controladoria de alta performance, com indicadores que guiam decisões estratégicas.</p>
         </div>
       </div>
       <div class="pillar">
-        <div class="pillar-icon">👥</div>
+        <div class="pillar-icon"><img src="ico-relacionamento.png" alt=""/></div>
         <div>
           <h4>Equipe de Nível Gerencial</h4>
           <p>Controllers, analistas financeiros seniores e consultores — não assistentes operacionais.</p>
         </div>
       </div>
       <div class="pillar">
-        <div class="pillar-icon">📐</div>
+        <div class="pillar-icon"><img src="ico-estrategia.png" alt=""/></div>
         <div>
           <h4>Customização Total</h4>
           <p>Cada implantação é desenhada para a realidade do cliente. Nada genérico, nada de prateleira.</p>
@@ -1584,7 +1589,7 @@ footer {
               </tbody>
             </table>
             <div style="margin-top:16px;padding:12px 16px;background:var(--g-fog);border:1px solid var(--g-line);border-radius:8px;display:flex;gap:12px;align-items:flex-start;">
-              <span style="font-size:18px;flex-shrink:0;">💡</span>
+              <img src="ico-estrategia.png" alt="" style="width:22px;height:22px;object-fit:contain;flex-shrink:0;filter:invert(39%) sepia(98%) saturate(500%) hue-rotate(95deg);"/>
               <div>
                 <div style="font-family:var(--mono);font-size:9px;letter-spacing:.12em;color:var(--g);text-transform:uppercase;margin-bottom:4px;">Insight STARQIA — Julho/25</div>
                 <div style="font-size:12px;color:var(--grey);line-height:1.6;">CMV 9,6% acima do orçado. Recomendamos revisão de contratos de fornecimento e análise de mix de produtos. Despesas operacionais com desvio de R$ 16,4K — identificamos R$ 9,2K em gastos não recorrentes que podem ser eliminados.</div>
@@ -1667,7 +1672,7 @@ footer {
 
   <div class="srv-grid">
     <div class="srv-tile reveal" data-num="01">
-      <div class="srv-tile-icon">🔬</div>
+      <div class="srv-tile-icon"><img src="ico-estrategia.png" alt=""/></div>
       <h3>Diagnóstico &amp; Auditoria de Processos</h3>
       <p>Mapeamos toda a estrutura financeira atual — fluxos, controles, sistemas e equipe — identificando gargalos, riscos e oportunidades de ganho.</p>
       <ul>
@@ -1679,7 +1684,7 @@ footer {
     </div>
 
     <div class="srv-tile reveal" data-num="02">
-      <div class="srv-tile-icon">⚙️</div>
+      <div class="srv-tile-icon"><img src="ico-administracao.png" alt=""/></div>
       <h3>Implantação de Controladoria</h3>
       <p>Estruturamos do zero ou reformulamos a área de controladoria com indicadores, processos e governança adequados ao porte da empresa.</p>
       <ul>
@@ -1691,7 +1696,7 @@ footer {
     </div>
 
     <div class="srv-tile reveal" data-num="03">
-      <div class="srv-tile-icon">🎓</div>
+      <div class="srv-tile-icon"><img src="ico-relacionamento.png" alt=""/></div>
       <h3>Treinamento da Equipe Financeira</h3>
       <p>Capacitamos os profissionais internos para operar com excelência — elevando o nível técnico e gerencial de toda a área.</p>
       <ul>
@@ -1703,7 +1708,7 @@ footer {
     </div>
 
     <div class="srv-tile reveal" data-num="04">
-      <div class="srv-tile-icon">📐</div>
+      <div class="srv-tile-icon"><img src="ico-planejamento.png" alt=""/></div>
       <h3>Reestruturação de Departamento</h3>
       <p>Para empresas com departamento financeiro existente mas que precisa evoluir — redesenhamos estrutura, processos e tecnologia.</p>
       <ul>
@@ -1715,7 +1720,7 @@ footer {
     </div>
 
     <div class="srv-tile reveal" data-num="05">
-      <div class="srv-tile-icon">🧩</div>
+      <div class="srv-tile-icon"><img src="ico-financeiro.png" alt=""/></div>
       <h3>CFO as a Service</h3>
       <p>Um Chief Financial Officer dedicado ao seu negócio — sem o custo de um executivo CLT. Presença estratégica nas decisões que importam.</p>
       <ul>
@@ -1727,7 +1732,7 @@ footer {
     </div>
 
     <div class="srv-tile reveal" data-num="06">
-      <div class="srv-tile-icon">🔗</div>
+      <div class="srv-tile-icon"><img src="ico-crm.png" alt=""/></div>
       <h3>Integração &amp; Tecnologia</h3>
       <p>Conectamos seus sistemas — ERP, bancos, plataformas fiscais — em um ecossistema financeiro integrado, automatizado e auditável.</p>
       <ul>
@@ -1748,28 +1753,28 @@ footer {
       <h2 class="s-h2 reveal">Empresas que<br>já chegaram <em>longe</em><br>e precisam ir<br><em>mais além.</em></h2>
       <div class="fw-profiles" style="margin-top:48px;">
         <div class="fw-card reveal">
-          <div class="fw-icon">🏢</div>
+          <div class="fw-icon"><img src="ico-cliente.png" alt=""/></div>
           <div>
             <h4>Médias e Grandes Empresas</h4>
             <p>Com faturamento acima de R$ 5M/ano que precisam de uma estrutura financeira à altura do seu tamanho.</p>
           </div>
         </div>
         <div class="fw-card reveal">
-          <div class="fw-icon">🏗️</div>
+          <div class="fw-icon"><img src="ico-backoffice.png" alt=""/></div>
           <div>
             <h4>Empresas em Expansão</h4>
             <p>Cresceram rápido e a estrutura financeira não acompanhou. Precisam de governança e controle profissional.</p>
           </div>
         </div>
         <div class="fw-card reveal">
-          <div class="fw-icon">🧭</div>
+          <div class="fw-icon"><img src="ico-estrategia.png" alt=""/></div>
           <div>
             <h4>Grupos Empresariais &amp; Holdings</h4>
             <p>Com múltiplas empresas que demandam visão consolidada, controle por entidade e relatórios para sócios e investidores.</p>
           </div>
         </div>
         <div class="fw-card reveal">
-          <div class="fw-icon">🔄</div>
+          <div class="fw-icon"><img src="ico-administracao.png" alt=""/></div>
           <div>
             <h4>Departamentos Financeiros a Reformular</h4>
             <p>Equipe interna que existe mas opera sem processos, sem indicadores e sem visão estratégica.</p>
@@ -1803,7 +1808,7 @@ footer {
 
   <div class="proc-timeline" style="margin-top:64px; max-width:860px;">
     <div class="proc-step reveal">
-      <div class="proc-num"><div class="pi">🔍</div><div class="pn">01</div></div>
+      <div class="proc-num"><div class="pi"><img src="ico-estrategia.png" alt="" style="width:22px;height:22px;object-fit:contain;filter:brightness(0) invert(1);"/></div><div class="pn">01</div></div>
       <div class="proc-body">
         <h4>Diagnóstico Financeiro</h4>
         <p>Entrevistas com liderança, análise de demonstrativos, mapeamento de sistemas, processos e equipe. Identificamos lacunas e oportunidades com base em evidências — não em suposições.</p>
@@ -1812,7 +1817,7 @@ footer {
     </div>
 
     <div class="proc-step reveal">
-      <div class="proc-num"><div class="pi">📐</div><div class="pn">02</div></div>
+      <div class="proc-num"><div class="pi"><img src="ico-planejamento.png" alt="" style="width:22px;height:22px;object-fit:contain;filter:brightness(0) invert(1);"/></div><div class="pn">02</div></div>
       <div class="proc-body">
         <h4>Desenho da Solução</h4>
         <p>Apresentamos o modelo financeiro ideal para o seu negócio: estrutura de controladoria, indicadores, fluxo de trabalho, tecnologias e plano de implantação com cronograma e responsáveis.</p>
@@ -1821,7 +1826,7 @@ footer {
     </div>
 
     <div class="proc-step reveal">
-      <div class="proc-num"><div class="pi">⚙️</div><div class="pn">03</div></div>
+      <div class="proc-num"><div class="pi"><img src="ico-administracao.png" alt="" style="width:22px;height:22px;object-fit:contain;filter:brightness(0) invert(1);"/></div><div class="pn">03</div></div>
       <div class="proc-body">
         <h4>Implantação &amp; Integração</h4>
         <p>Executamos a implantação com acompanhamento intensivo — configuração de sistemas, padronização de processos, treinamento da equipe e ajuste fino até a operação estar estável.</p>
@@ -1830,7 +1835,7 @@ footer {
     </div>
 
     <div class="proc-step reveal">
-      <div class="proc-num"><div class="pi">📊</div><div class="pn">04</div></div>
+      <div class="proc-num"><div class="pi"><img src="ico-backoffice.png" alt="" style="width:22px;height:22px;object-fit:contain;filter:brightness(0) invert(1);"/></div><div class="pn">04</div></div>
       <div class="proc-body">
         <h4>Operação &amp; Acompanhamento</h4>
         <p>Após a implantação, a STARQIA permanece como parceiro operacional e estratégico — com reuniões periódicas, análise de desvios, relatórios executivos e consultoria contínua.</p>
@@ -1839,7 +1844,7 @@ footer {
     </div>
 
     <div class="proc-step reveal">
-      <div class="proc-num"><div class="pi">🚀</div><div class="pn">05</div></div>
+      <div class="proc-num"><div class="pi"><img src="ico-financeiro.png" alt="" style="width:22px;height:22px;object-fit:contain;filter:brightness(0) invert(1);"/></div><div class="pn">05</div></div>
       <div class="proc-body">
         <h4>Evolução Contínua</h4>
         <p>Revisão semestral de processos, indicadores e tecnologia. Atualizamos o modelo financeiro conforme o negócio evolui — garantindo que a estrutura sempre suporte o próximo nível de crescimento.</p>
@@ -1878,12 +1883,23 @@ footer {
   </div>
 </section>
 
+<!-- ── CROSS-LINK STARQIA ────────────────────────────────────────── -->
+<div style="background:var(--g);padding:32px 72px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;">
+  <div>
+    <div style="font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.65);margin-bottom:6px;">Conheça também</div>
+    <div style="font-family:var(--serif);font-size:20px;font-weight:700;color:#fff;">STARQIA Soluções Contábeis</div>
+    <div style="font-size:14px;color:rgba(255,255,255,.75);margin-top:4px;">Contabilidade estratégica, planejamento tributário, abertura de empresas e DP.</div>
+  </div>
+  <a href="https://starqia.com" target="_blank" style="background:#fff;color:var(--g);font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:14px 32px;border-radius:8px;text-decoration:none;white-space:nowrap;transition:all .2s;" onmouseover="this.style.background='#f0f0f0'" onmouseout="this.style.background='#fff'">Acessar starqia.com →</a>
+</div>
+
 <!-- ── FOOTER ─────────────────────────────────────────────────────── -->
 <footer>
   <div class="foot-l">
     <img src="logo-nav.png" alt="STARQIA" style="height:44px;width:auto;display:block;"/>
   </div>
   <div class="foot-c">© 2025 STARQIA · Gestão Financeira Estratégica · GFO as a Service</div>
+  <a href="https://starqia.com" target="_blank" style="font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--g);text-decoration:none;">← starqia.com · Contabilidade Estratégica</a>
   <div class="foot-crc">CRC/SP 326.230/SP</div>
 </footer>
 
