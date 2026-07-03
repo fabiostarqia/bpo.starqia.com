@@ -1093,6 +1093,54 @@ footer {
   pointer-events:none;
   z-index:0;
 }
+
+/* ── CORREÇÃO ÍCONES — override forçado ── */
+.pillar-icon {
+  width: 48px !important; height: 48px !important;
+  font-size: 0 !important;
+  background: rgba(0,170,79,.15);
+  border-radius: 12px;
+  display: flex !important; align-items: center !important; justify-content: center !important;
+  flex-shrink: 0;
+  padding: 10px;
+  overflow: hidden;
+}
+.pillar-icon img {
+  width: 100% !important; height: 100% !important;
+  max-width: 28px !important; max-height: 28px !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+.fw-icon {
+  width: 48px !important; height: 48px !important;
+  font-size: 0 !important;
+  padding: 10px !important;
+  overflow: hidden;
+}
+.fw-icon img {
+  width: 100% !important; height: 100% !important;
+  max-width: 28px !important; max-height: 28px !important;
+  object-fit: contain !important;
+  display: block !important;
+  filter: brightness(0) invert(1);
+}
+.srv-tile-icon {
+  width: 52px !important; height: 52px !important;
+  font-size: 0 !important;
+  padding: 12px !important;
+  overflow: hidden;
+}
+.srv-tile-icon img {
+  width: 100% !important; height: 100% !important;
+  max-width: 28px !important; max-height: 28px !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+.proc-num .pi img {
+  width: 20px !important; height: 20px !important;
+  object-fit: contain !important;
+  display: block !important;
+}
 </style>
 </head>
 <body>
@@ -1119,12 +1167,14 @@ footer {
 <section id="hero">
   <div class="hero-accent"></div>
   <div style="position:absolute;top:0;right:0;width:42vw;height:56vh;
-              display:flex;align-items:center;justify-content:center;
-              z-index:1;pointer-events:none;clip-path:polygon(30% 0%,100% 0%,100% 100%,0% 100%);">
-    <img src="logo-vertical.png" alt="STARQIA"
-         style="height:55%;width:auto;opacity:.22;
-                filter:brightness(0) invert(1);"
-         onerror="this.style.display='none'"/>
+              z-index:1;pointer-events:none;
+              clip-path:polygon(30% 0%,100% 0%,100% 100%,0% 100%);
+              background-image:url('logo-vertical.png');
+              background-repeat:no-repeat;
+              background-position:center 60%;
+              background-size:auto 50%;
+              opacity:.22;
+              filter:brightness(0) invert(1);">
   </div>
   <div class="hero-content">
     <div class="hero-eyebrow">STARQIA · Gestão Financeira Estratégica</div>
